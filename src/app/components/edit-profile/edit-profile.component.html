@@ -1,0 +1,17 @@
+<md-card class="card">
+  <md-card-title>Edit profle</md-card-title>
+
+  <md-card-content>
+    <md-input-container class="wide">
+      <input mdInput [(ngModel)]="person.name" type="text" placeholder="Name"/>
+    </md-input-container>
+
+    <md-input-container class="wide">
+      <input mdInput [(ngModel)]="person.phonenumber" name="phonenumber" type="text" placeholder="Phonenumber"/>
+    </md-input-container>
+  </md-card-content>
+
+  <md-card-actions>
+    <button md-button (click)="saveProfile(person)" md-raised-button color="accent"><md-icon>check</md-icon> Save</button>
+  </md-card-actions>
+</md-card>

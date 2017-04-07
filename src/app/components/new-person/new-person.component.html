@@ -1,0 +1,15 @@
+<md-card class="card">
+  <md-card-title>Add person</md-card-title>
+
+  <md-card-content>
+    <select placeholder="Choose person" [(ngModel)]="person.actorID" name="actorID">
+      <option *ngFor="let person of allPersons" [value]="person.$key">{{person?.name}}</option>
+    </select>
+
+    <md-slide-toggle color="accent" ngDefaultControl [(ngModel)]="person.canEdit">Can edit</md-slide-toggle>
+  </md-card-content>
+
+  <md-card-actions>
+   <button md-raised-button (click)="addPerson()" color="accent"><md-icon>person_add</md-icon> Add person</button>
+  </md-card-actions>
+</md-card>

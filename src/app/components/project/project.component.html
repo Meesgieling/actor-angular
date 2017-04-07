@@ -1,0 +1,11 @@
+<app-new-project></app-new-project>
+
+<md-card class="card" *ngFor="let project of projects" [routerLink]="['/project-detail', project.$key]">
+  <md-card-title>{{project.title}}</md-card-title>
+  <md-card-subtitle>{{project.description}}</md-card-subtitle>
+
+  <md-card-actions>
+    <button md-button [routerLink]="['/project/edit', project.$key]" color="accent"><md-icon>mode_edit</md-icon> Edit</button>
+    <button md-button (click)="removeProject(project)" color="accent"><md-icon>delete</md-icon> Remove</button>
+  </md-card-actions>
+</md-card>

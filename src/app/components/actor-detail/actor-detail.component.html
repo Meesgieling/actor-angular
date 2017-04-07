@@ -1,0 +1,45 @@
+<app-new-person></app-new-person>
+
+<md-card class="card">
+  <md-card-title>{{actor?.title}}</md-card-title>
+  <md-card-subtitle>{{actor?.description}}</md-card-subtitle>
+
+  <md-card-content *ngIf="personModels?.length > 0">
+    <h1>Persons</h1>
+
+    <md-card class="card" *ngFor="let person of personModels">
+      <span class="user-title">
+        <p *ngIf="person?.canEdit == true"><md-icon class="full-width" color="primary">verified_user</md-icon><b>Admin</b></p>
+        <p *ngIf="person?.canEdit == false"><md-icon class="full-width" color="primary">person</md-icon><b>User</b></p>
+      </span>
+      <div class="profile">
+        <div class="block">
+          <img class="profilePhoto" md-card-avatar src="{{person?.profilePhoto}}">
+        </div>
+        <div class="block">
+          <md-card-title>{{person?.name}}</md-card-title>
+          <md-card-subtitle>{{person?.email}}</md-card-subtitle>
+        </div>
+      </div>
+
+      <md-card-content>
+        <md-list class="person-details" *ngIf="person?.phonenumber">
+          <md-list-item class="person-details">
+            <md-icon md-mini md-list-avatar>phone</md-icon>
+            <p md-line>{{person?.phonenumber}}</p>
+          </md-list-item>
+          <md-list-item class="person-details" *ngIf="person?.sidenote">
+            <md-icon md-mini md-list-avatar>speaker_notes</md-icon>
+            <p md-line>{{person?.sidenote}}</p>
+          </md-list-item>
+        </md-list>
+      </md-card-content>
+
+      <md-card-actions>
+        <button md-button [routerLink]="['/person/edit', projectKey, actor.$key, person.$key]" color="accent"><md-icon>mode_edit</md-icon> Edit</button>
+        <button md-button (click)="removePerson(person)" color="accent"><md-icon>delete</md-icon> Remove</button>
+      </md-card-actions>
+    </md-card>
+
+  </md-card-content>
+</md-card>

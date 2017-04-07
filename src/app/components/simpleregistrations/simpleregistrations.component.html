@@ -1,0 +1,21 @@
+<md-card class="card50perc">
+  <md-card-title>
+    Simple Registrations
+  </md-card-title>
+
+  <table class="inschrijvingtabel">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+
+    </tr>
+    <tr *ngFor="let reg of registrations">
+      <td> {{ reg.fullName}}</td>
+      <td> {{ reg.email}}</td>
+
+      <td><button (click)="removeRegistration(reg)" md-raised-button>Remove</button></td>
+    </tr>
+
+  </table>
+
+</md-card>

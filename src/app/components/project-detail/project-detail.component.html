@@ -1,0 +1,21 @@
+<app-new-actor></app-new-actor>
+
+<md-card class="card">
+  <md-card-title>{{project?.title}}</md-card-title>
+  <md-card-subtitle>{{project?.description}}</md-card-subtitle>
+
+  <md-card-content *ngIf="actors?.length > 0">
+    <h2>Actors</h2>
+
+    <md-card class="card" *ngFor="let actor of actors" [routerLink]="['/actor-detail', project.$key, actor.$key]">
+      <md-card-title>{{actor?.title}}</md-card-title>
+      <md-card-subtitle>{{actor?.description}}</md-card-subtitle>
+
+      <md-card-actions>
+        <button md-button [routerLink]="['/actor/edit', project.$key, actor.$key]" color="accent"><md-icon>mode_edit</md-icon> Edit</button>
+        <button md-button (click)="removeActor(actor)" color="accent"><md-icon>delete</md-icon> Remove</button>
+      </md-card-actions>
+    </md-card>
+  </md-card-content>
+
+</md-card>

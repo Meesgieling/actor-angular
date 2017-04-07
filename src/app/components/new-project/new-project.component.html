@@ -1,0 +1,17 @@
+<md-card class="card">
+  <md-card-title>Add project</md-card-title>
+
+  <md-card-content>
+    <md-input-container class="wide">
+      <input mdInput [(ngModel)]="project.title" type="text" placeholder="Title"/>
+    </md-input-container>
+
+    <md-input-container class="wide">
+      <input mdInput [(ngModel)]="project.description" name="description" type="text" placeholder="Description"/>
+    </md-input-container>
+  </md-card-content>
+
+  <md-card-actions>
+    <button md-button md-raised-button (click)="addProject()" color="accent"><md-icon>group_add</md-icon> Add project</button>
+  </md-card-actions>
+</md-card>

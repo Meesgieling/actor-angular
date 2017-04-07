@@ -1,0 +1,46 @@
+<md-sidenav-container>
+  <md-sidenav #sidenav class="navbar-sidenav">
+    <md-list (click)="sidenav.close()">
+      <h2 md-subheader class="navbar-header">Project</h2>
+      <md-list-item [routerLink]="['']">
+        <md-icon md-list-avatar>folder</md-icon>
+        <h4 md-line>Projects</h4>
+        <p md-line>See all the projects</p>
+      </md-list-item>
+      <md-list-item [routerLink]="['']">
+        <md-icon md-list-avatar>folder</md-icon>
+        <h4 md-line>New project</h4>
+        <p md-line>Add a project</p>
+      </md-list-item>
+      <md-divider></md-divider>
+
+      <h2 md-subheader class="navbar-header">Profile</h2>
+      <md-list-item [routerLink]="['profile/edit']">
+        <md-icon md-list-avatar>edit</md-icon>
+        <h4 md-line>Edit profile</h4>
+        <p md-line>Update your profile</p>
+      </md-list-item>
+    </md-list>
+  </md-sidenav>
+
+  <md-toolbar color="primary">
+    <md-icon *ngIf="isSignedIn" (click)="sidenav.open()">menu</md-icon>
+    <span class="toolbar-spacer">
+         <h2 flex md-truncate class="toolbar-text">AT-App</h2>
+    </span>
+
+
+    <app-sign-out *ngIf="isSignedIn"></app-sign-out>
+    <!-- <app-sign-in *ngIf="!isSignedIn"></app-sign-in> -->
+
+    <!-- <button md-button [mdMenuTriggerFor]="appMenu"><md-icon>menu</md-icon> Menu</button>
+    <md-menu #appMenu="mdMenu">
+      <button routerLink="/projects" md-menu-item> Projects</button>
+      <button routerLink="/projects/add" md-menu-item> New Project</button>
+    </md-menu> -->
+  </md-toolbar>
+
+  <router-outlet></router-outlet>
+</md-sidenav-container>
+
+<script src="//cdn.jsdelivr.net/ramda/0.23.0/ramda.min.js"></script>

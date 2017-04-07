@@ -1,0 +1,38 @@
+<md-card class="card">
+    <md-card-title>Edit person</md-card-title>
+
+    <span class="user-title">
+      <p *ngIf="person?.canEdit == true"><md-icon class="full-width" color="primary">verified_user</md-icon><b>Admin</b></p>
+      <p *ngIf="person?.canEdit == false"><md-icon class="full-width" color="primary">person</md-icon><b>User</b></p>
+    </span>
+    <div class="profile">
+      <div class="block">
+        <img class="profilePhoto" md-card-avatar src="{{personData?.profilePhoto}}">
+      </div>
+      <div class="block">
+        <md-card-title>{{personData?.name}}</md-card-title>
+        <md-card-subtitle>{{personData?.email}}</md-card-subtitle>
+      </div>
+    </div>
+
+    <md-card-content>
+      <md-list class="person-details" *ngIf="personData?.phonenumber">
+        <md-list-item class="person-details">
+          <md-icon md-mini md-list-avatar>phone</md-icon>
+          <p md-line>{{personData?.phonenumber}}</p>
+        </md-list-item>
+        <md-list-item class="person-details" *ngIf="personData?.sidenote">
+          <md-icon md-mini md-list-avatar>speaker_notes</md-icon>
+          <p md-line>{{personData?.sidenote}}</p>
+        </md-list-item>
+      </md-list>
+    </md-card-content>
+
+  <md-card-content>
+    <md-slide-toggle color="accent" ngDefaultControl [(ngModel)]="person.canEdit">Can edit</md-slide-toggle>
+  </md-card-content>
+
+  <md-card-actions>
+    <button md-button (click)="savePerson(person)" md-raised-button color="accent"><md-icon>check</md-icon> Save</button>
+  </md-card-actions>
+</md-card>

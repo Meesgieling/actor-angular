@@ -1,0 +1,17 @@
+<md-card class="card">
+  <md-card-title>Edit actor</md-card-title>
+
+  <md-card-content>
+    <md-input-container class="wide">
+      <input mdInput [(ngModel)]="actor.title" type="text" placeholder="Title"/>
+    </md-input-container>
+
+    <md-input-container class="wide">
+      <input mdInput [(ngModel)]="actor.description" name="description" type="text" placeholder="Description"/>
+    </md-input-container>
+  </md-card-content>
+
+  <md-card-actions>
+    <button md-button (click)="saveActor(actor)" md-raised-button color="accent"><md-icon>check</md-icon> Save</button>
+  </md-card-actions>
+</md-card>

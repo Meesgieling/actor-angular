@@ -1,0 +1,34 @@
+<md-card class="card30perc">
+  <md-card-title>
+    Simple registration
+  </md-card-title>
+
+    <md-input-container>
+      <input
+        mdInput
+        [(ngModel)]="registration.fullName"
+        type="text"
+        placeholder="Enter full name"/>
+    </md-input-container>
+    <br>
+    <md-input-container>
+      <input
+        mdInput
+        [(ngModel)]="registration.email"
+        name="email"
+        type="text"
+        placeholder="Enter email-address"/>
+    </md-input-container>
+
+    <br>
+    <button md-raised-button (click)="register()">
+      Register
+      <md-icon>done</md-icon>
+    </button>
+</md-card>
+
+<pre>
+      {{ profiel | json}}
+</pre>
+
+

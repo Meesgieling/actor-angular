@@ -1,0 +1,110 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/core/theming/prebuilt/indigo-pink.css';
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+
+/*.mat-button {
+  color: #e91e63!important;
+}
+
+.mat-raised-button {
+  /* This is our accent color: Pink */
+  /*background-color: #e91e63;
+  color: #ffffff!important;
+}*/
+
+.wrapper {
+  width: 100%;
+}
+
+.toolbar-text {
+  color: #ffffff;
+}
+
+.toolbar-icon {
+  padding: 0 14px;
+}
+
+.toolbar-spacer {
+  text-align: center;
+  flex: 1 1 auto;
+}
+
+.navbar-sidenav {
+  padding: 20px;
+  border: 0;
+}
+
+.navbar-header {
+  font-size: 24px!important;
+}
+
+.card {
+  margin-top: 16px;
+}
+
+.full-width {
+    width: 100%!important;
+}
+
+.wide {
+  width: 60%;
+}
+
+.block {
+  display: block;
+  float: left;
+}
+
+span.user-title {
+    position: absolute;
+    float: right;
+    right: 0;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.profilePhoto {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  background-size: cover;
+  border-radius: 30px;
+}
+
+.profile {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.block {
+  float: left;
+}
+
+md-list.person-details.mat-list {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+md-list-item.person-details.mat-list-item-avatar.mat-list-item {
+    height: 30px;
+}
+
+
+.mat-list .mat-list-item .mat-list-avatar, .mat-nav-list .mat-list-item .mat-list-avatar {
+    line-height: 38px!important;
+}
+
+
+/*.mat-card-content, .mat-card-header .mat-card-title, .mat-card-subtitle {
+    font-size: 20px;
+}
+
+.mat-toolbar.mat-primary {
+    background: #3f51b5;
+    color: rgba(255,255,255,1)!important;
+}
+
+.mat-sidenav-container {
+  background: #ffffff!important;
+}*/
