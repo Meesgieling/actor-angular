@@ -7,11 +7,6 @@
         <h4 md-line>Projects</h4>
         <p md-line>See all the projects</p>
       </md-list-item>
-      <md-list-item [routerLink]="['']">
-        <md-icon md-list-avatar>folder</md-icon>
-        <h4 md-line>New project</h4>
-        <p md-line>Add a project</p>
-      </md-list-item>
       <md-divider></md-divider>
 
       <h2 md-subheader class="navbar-header">Profile</h2>
@@ -29,7 +24,7 @@
          <h2 flex md-truncate class="toolbar-text">AT-App</h2>
     </span>
 
-
+    <md-icon *ngIf="isSignedIn" (click)="goback()">arrow_back</md-icon>
     <app-sign-out *ngIf="isSignedIn"></app-sign-out>
     <!-- <app-sign-in *ngIf="!isSignedIn"></app-sign-in> -->
 

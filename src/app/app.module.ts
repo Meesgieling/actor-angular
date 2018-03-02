@@ -30,9 +30,10 @@ import { EditPersonComponent } from './components/edit-person/edit-person.compon
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 
 export const firebaseConfig = {
-  apiKey: "",
+  apiKey: "AIzaSyClAJ7knWckEY1F0RnJdXwaj3YMPmV2G-g",
   authDomain: "at-app-7f7e4.firebaseapp.com",
   databaseURL: "https://at-app-7f7e4.firebaseio.com",
+  projectId: "at-app-7f7e4",
   storageBucket: "at-app-7f7e4.appspot.com",
   messagingSenderId: "973845504281"
 };

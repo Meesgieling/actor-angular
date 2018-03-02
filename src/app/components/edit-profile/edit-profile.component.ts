@@ -18,11 +18,16 @@ import {PersonModel} from "../../models/PersonModel";
 export class EditProfileComponent implements OnInit {
   person : PersonModel
   persons: Array<Person> = []
+  public isSignedIn: boolean;
 
   constructor(public afService: AF, private router: Router, private snackBar: MdSnackBar, private personService: PersonFirebaseService) {
     this.afService.af.auth.subscribe((auth) => {
-        if(auth == null) this.router.navigate(['login']);
-
+      if(auth == null) {
+        this.isSignedIn = false;
+        this.router.navigate(['login']);
+      }
+      else {
+        this.isSignedIn = true;
         this.personService.getPersonsOfPersons().subscribe(p => {
             this.persons = p;
             for (var i = 0; i < this.persons.length; i++) {
@@ -32,8 +37,9 @@ export class EditProfileComponent implements OnInit {
             }
         });
 
-        this.person = { actorID: "", canEdit: false, email: "dsads", profilePhoto: "", sidenote: "", name: "test", phonenumber: "5039285"}
-    });
+        this.person = { actorID: "", canEdit: false, email: "", profilePhoto: "", sidenote: "", name: "", phonenumber: ""}
+    }
+  });
   }
 
   saveProfile(person : PersonModel) {

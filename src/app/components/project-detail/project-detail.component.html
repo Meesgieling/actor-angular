@@ -7,7 +7,7 @@
   <md-card-content *ngIf="actors?.length > 0">
     <h2>Actors</h2>
 
-    <md-card class="card" *ngFor="let actor of actors" [routerLink]="['/actor-detail', project.$key, actor.$key]">
+    <md-card class="card2" *ngFor="let actor of actors" [routerLink]="['/actor-detail', project.$key, actor.$key]">
       <md-card-title>{{actor?.title}}</md-card-title>
       <md-card-subtitle>{{actor?.description}}</md-card-subtitle>
 

@@ -11,8 +11,7 @@ export class LandingspageComponent implements OnInit {
   public isSignedIn: boolean;
 
   constructor(public afService: AF, private router: Router) {
-    this.afService.af.auth.subscribe(
-      (auth) => {
+    this.afService.af.auth.subscribe((auth) => {
         if(auth == null) {
           this.isSignedIn = false;
           this.router.navigate(['login']);
@@ -21,6 +20,9 @@ export class LandingspageComponent implements OnInit {
         }
       }
     );
+  }
+  goback(){
+    window.history.back();
   }
 
   logout() {
