@@ -22,10 +22,15 @@ export class NewProjectComponent implements OnInit {
   }
 
   addProject(){
+    if(this.project.title && this.project.description != ""){
     this.projectService.addProject(this.project)
-    this.snackBar.open("Successfuly added project", "", { duration: 2000, });
+    this.snackBar.open("Successfully added project", "", { duration: 2000, });
     this.init()
   }
+  else{
+    this.snackBar.open("Fill in both title and description", "", { duration: 2000, });
+  }
+}
 
   ngOnInit() {}
 }

@@ -32,11 +32,16 @@ export class NewPersonComponent implements OnInit {
 
   addPerson(){
     this.sub = this.route.params.subscribe(params => {
+      if(this.person.actorID != ""){
       const key = params['key'];
       const key2 = params['key2'];
       this.personService.addPerson(key, key2, this.person)
-      this.snackBar.open("Successfuly added person", "", { duration: 2000, });
+      this.snackBar.open("Successfully added person", "", { duration: 2000, });
       this.init()
+    }
+    else{
+      this.snackBar.open("Select a person", "", { duration: 2000, });
+    }
     })
   }
 

@@ -20,6 +20,6 @@ export class ProjectComponent implements OnInit {
 
   removeProject(project: Project){
     this.projectService.removeProject(project)
-    this.snackBar.open("Successfuly remove project", "", { duration: 2000, });
+    this.snackBar.open("Successfully remove project", "", { duration: 2000, });
   }
 }

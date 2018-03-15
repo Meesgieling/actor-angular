@@ -14,7 +14,7 @@ export class SignInComponent {
 
   signIn() {
     this.afService.loginWithGoogle().then((data) => {
-      this.snackBar.open("Successfuly signed in", "", {
+      this.snackBar.open("Successfully signed in", "", {
         duration: 2000,
       });
       this.router.navigate(['']);

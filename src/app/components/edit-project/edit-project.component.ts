@@ -39,9 +39,14 @@ export class EditProjectComponent implements OnInit {
 
   saveProject(project: Project){
     this.sub = this.route.params.subscribe(params => {
+      if(this.project.title && this.project.description !=""){
       this.projectService.saveProject(project)
-      this.snackBar.open("Successfuly saved project", "", { duration: 2000, });
+      this.snackBar.open("Successfully saved project", "", { duration: 2000, });
       this.router.navigate(['']);
+    }
+    else{
+      this.snackBar.open("Fill in both title and description", "", { duration: 2000, });
+    }
     })
   }
 

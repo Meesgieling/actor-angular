@@ -43,9 +43,14 @@ export class EditProfileComponent implements OnInit {
   }
 
   saveProfile(person : PersonModel) {
+    if(this.person.name && this.person.phonenumber != ""){
     this.personService.saveProfile(person);
-    this.snackBar.open("Successfuly saved", "", { duration: 2000, });
+    this.snackBar.open("Successfully saved", "", { duration: 2000, });
     this.router.navigate(['']);
+  }
+  else{
+    this.snackBar.open("Fill in all the required fields", "", { duration: 2000, });
+    }
   }
 
   ngOnInit() {

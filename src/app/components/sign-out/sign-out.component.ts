@@ -18,7 +18,7 @@ export class SignOutComponent implements OnInit {
 
  logout() {
    this.afService.logout();
-   this.snackBar.open("Successfuly signed out", "", { duration: 2000, });
+   this.snackBar.open("Successfully signed out", "", { duration: 2000, });
  }
 
   ngOnInit() {}

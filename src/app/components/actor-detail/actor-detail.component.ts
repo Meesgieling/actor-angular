@@ -75,7 +75,7 @@ export class ActorDetailComponent implements OnInit {
       const key = params['key'];
       const key2 = params['key2'];
       this.personService.removePerson(key, key2, person);
-      this.snackBar.open("Successfuly removed person", "", { duration: 2000, });
+      this.snackBar.open("Successfully removed person", "", { duration: 2000, });
     })
   }
 

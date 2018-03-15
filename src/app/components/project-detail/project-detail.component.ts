@@ -31,7 +31,7 @@ export class ProjectDetailComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
       const key = params['key'];
       this.actorService.removeActor(key, actor)
-      this.snackBar.open("Successfuly removed actor", "", { duration: 2000, });
+      this.snackBar.open("Successfully removed actor", "", { duration: 2000, });
     })
   }
 

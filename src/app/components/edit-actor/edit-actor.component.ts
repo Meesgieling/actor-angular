@@ -44,10 +44,15 @@ export class EditActorComponent implements OnInit {
 
   saveActor(actor: Actor){
     this.sub = this.route.params.subscribe(params => {
+      if(this.actor.title && this.actor.description != ""){
       const key = params['key'];
       this.actorService.saveActor(key, actor)
-      this.snackBar.open("Successfuly saved actor", "", { duration: 2000, });
+      this.snackBar.open("Successfully saved actor", "", { duration: 2000, });
       this.router.navigate(['project-detail/'+ key]);
+    }
+    else{
+      this.snackBar.open("Fill in both title and description", "", { duration: 2000, });
+    }
     })
   }
 
@@ -56,7 +61,7 @@ export class EditActorComponent implements OnInit {
       const key = params['key'];
       const key2 = params['key2'];
       this.personService.removePerson(key, key2, person)
-      this.snackBar.open("Successfuly removed person", "", { duration: 2000, });
+      this.snackBar.open("Successfully removed person", "", { duration: 2000, });
 
     })
   }

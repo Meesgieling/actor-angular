@@ -47,7 +47,7 @@ export class EditPersonComponent implements OnInit {
       const key = params['key'];
       const key2 = params['key2'];
       this.personService.savePerson(key, key2, person)
-      this.snackBar.open("Successfuly saved person", "", { duration: 2000, });
+      this.snackBar.open("Successfully saved person", "", { duration: 2000, });
       this.router.navigate(['actor-detail/'+ key + '/' + key2]);
 
     })

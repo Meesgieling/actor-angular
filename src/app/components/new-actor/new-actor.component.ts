@@ -30,12 +30,16 @@ export class NewActorComponent implements OnInit {
 
   addActor(){
     this.sub = this.route.params.subscribe(params => {
+      if(this.actor.title && this.actor.description != ""){
       const key = params['key'];
       this.actorService.addActor(key, this.actor)
-      this.snackBar.open("Successfuly added actor", "", { duration: 2000, });
+      this.snackBar.open("Successfully added actor", "", { duration: 2000, });
       this.init()
-    })
-  }
-
+    }
+    else{
+      this.snackBar.open("Fill in both title and description", "", { duration: 2000, });
+    }
+  })
+}
   ngOnInit() {}
 }
