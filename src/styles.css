@@ -1,16 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/core/theming/prebuilt/indigo-pink.css';
 @import '~https://fonts.googleapis.com/icon?family=Material+Icons';
 
-/*.mat-button {
-  color: #e91e63!important;
-}
-
-.mat-raised-button {
-  /* This is our accent color: Pink */
-  /*background-color: #e91e63;
-  color: #ffffff!important;
-}*/
 html{
   height: 100%;
 }
@@ -21,7 +11,7 @@ body{
 }
 
 .toolbar-text {
-  color: #ffffff;
+  color: #000000;
 }
 
 .toolbar-icon {
@@ -100,17 +90,3 @@ md-list-item.person-details.mat-list-item-avatar.mat-list-item {
 .mat-list .mat-list-item .mat-list-avatar, .mat-nav-list .mat-list-item .mat-list-avatar {
     line-height: 38px!important;
 }
-
-
-/*.mat-card-content, .mat-card-header .mat-card-title, .mat-card-subtitle {
-    font-size: 20px;
-}
-
-.mat-toolbar.mat-primary {
-    background: #3f51b5;
-    color: rgba(255,255,255,1)!important;
-}
-
-.mat-sidenav-container {
-  background: #ffffff!important;
-}*/

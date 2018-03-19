@@ -28,8 +28,6 @@ import { NewPersonComponent } from './components/new-person/new-person.component
 import { EditPersonComponent } from './components/edit-person/edit-person.component';
 
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
-import { OnewaybindingComponent } from './components/onewaybinding/onewaybinding.component';
-import { TwowaybindingComponent } from './components/twowaybinding/twowaybinding.component';
 import { SimpleRegistrationComponent } from './components/simpleregistration/simpleregistration.component';
 import { SimpleregistrationsComponent } from './components/simpleregistrations/simpleregistrations.component';
 
@@ -78,8 +76,6 @@ const routes = [
     EditPersonComponent,
 
     EditProfileComponent,
-    OnewaybindingComponent,
-    TwowaybindingComponent,
     SimpleRegistrationComponent,
     SimpleregistrationsComponent
   ],
@@ -89,7 +85,6 @@ const routes = [
     HttpModule,
     AngularFireModule.initializeApp(firebaseConfig),
     RouterModule.forRoot(routes),
-    //MaterialModule,
     MaterialModule.forRoot(),
   ],
   providers: [AF, ProjectFirebaseService, ActorFirebaseService, PersonFirebaseService],

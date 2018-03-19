@@ -2,7 +2,7 @@
   <md-sidenav #sidenav class="navbar-sidenav">
     <md-list (click)="sidenav.close()">
       <h2 md-subheader class="navbar-header">Project</h2>
-      <md-list-item [routerLink]="['']">
+      <md-list-item [routerLink]="['']" style = "cursor: pointer;">
         <md-icon md-list-avatar>folder</md-icon>
         <h4 md-line>Projects</h4>
         <p md-line>See all the projects</p>
@@ -10,7 +10,7 @@
       <md-divider></md-divider>
 
       <h2 md-subheader class="navbar-header">Profile</h2>
-      <md-list-item [routerLink]="['profile/edit']">
+      <md-list-item [routerLink]="['profile/edit']" style = "cursor: pointer;">
         <md-icon md-list-avatar>edit</md-icon>
         <h4 md-line>Edit profile</h4>
         <p md-line>Update your profile</p>
@@ -19,20 +19,13 @@
   </md-sidenav>
 
   <md-toolbar color="primary">
-    <md-icon *ngIf="isSignedIn" (click)="sidenav.open()">menu</md-icon>
+    <md-icon *ngIf="isSignedIn" (click)="sidenav.open()" style = "cursor: pointer;">menu</md-icon>
     <span class="toolbar-spacer">
          <h2 flex md-truncate class="toolbar-text">AT-App</h2>
     </span>
 
-    <md-icon *ngIf="isSignedIn" (click)="goback()">arrow_back</md-icon>
-    <app-sign-out *ngIf="isSignedIn"></app-sign-out>
-    <!-- <app-sign-in *ngIf="!isSignedIn"></app-sign-in> -->
-
-    <!-- <button md-button [mdMenuTriggerFor]="appMenu"><md-icon>menu</md-icon> Menu</button>
-    <md-menu #appMenu="mdMenu">
-      <button routerLink="/projects" md-menu-item> Projects</button>
-      <button routerLink="/projects/add" md-menu-item> New Project</button>
-    </md-menu> -->
+    <md-icon *ngIf="isSignedIn" (click)="goback()" style = "cursor: pointer; margin-right: 10px;">arrow_back</md-icon>
+    <app-sign-out *ngIf="isSignedIn" style = "cursor: pointer;"></app-sign-out>
   </md-toolbar>
 
   <router-outlet></router-outlet>
